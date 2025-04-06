@@ -42,6 +42,9 @@ public class MainGUI {
 		dateFld.setEditable(false);
 		barPnl.add(dateFld, BorderLayout.CENTER);
 		
+		/**
+		 * Generates and stores the random green color by calling the generateGreen() method
+		 */
 		Color randomGreen = generateGreen();
 		
 		dateBtn.addActionListener(new ActionListener() {
@@ -99,6 +102,12 @@ public class MainGUI {
 		
 	}
 	
+	/**
+	 * This method returns a random shade of green by randomizing high levels of green
+	 * and randomizing low levels of blue and red. It Then Returns the RGB value as a Color variable to be stored 
+	 * to ensure that the color only changes once when the colorBtn is pressed. 
+	 * @return random green color.
+	 */
 	private static Color generateGreen() {
 		Random num = new Random();
 		int green = 100 + num.nextInt(156);
